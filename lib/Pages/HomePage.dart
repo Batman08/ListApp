@@ -21,6 +21,15 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(StringHelpers.appTitle),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 10, left: 10),
+            child: GestureDetector(
+              onTap: () {},
+              child: Icon(Icons.settings),
+            ),
+          ),
+        ],
       ),
       body: FutureBuilder(
           future: NoteProvider.getNotesList(),
