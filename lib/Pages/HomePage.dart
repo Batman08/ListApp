@@ -31,6 +31,52 @@ class HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text(
+                'Menu',
+                style: new TextStyle(fontSize: 45.0),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Settings'),
+              onTap: () {
+              /*  AlertDialog(
+                  title: Text("Settings"),
+                  content: Column(
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(
+                          icon: Icon(Icons.settings),
+                          labelText: "username",
+                        ),
+                      ),
+                    ],
+                  ),
+                );*/
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('More Info'),
+              onTap: () {
+            /*    showAboutDialog(context: context, applicationIcon: FlutterLogo(),
+                applicationName: "Simple List",
+                  applicationVersion: "1.0.0",
+                  applicationLegalese: "Simple note taking app where you can place all your thoughts"
+                );
+                Navigator.pop(context);*/
+              },
+            ),
+          ],
+        ),
+      ),
       body: FutureBuilder(
           future: NoteProvider.getNotesList(),
           builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
