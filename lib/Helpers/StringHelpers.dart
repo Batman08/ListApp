@@ -20,7 +20,7 @@ class StringHelpers {
   static const editPageTitleHint = 'Title';
   static const editPageDescriptioneHint = 'Description';
   static const editPageSave = 'Save';
-   static const editPageDiscardNote = 'Discard';
+   static const editPageDiscardNote = 'Cancel';
   static const editPageDiscard = 'Discard Changes';
   static const editPageDelete = 'Delete';
   static const editPageCancel = 'Cancel';
